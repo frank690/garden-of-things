@@ -1,5 +1,5 @@
 # garden-of-things
-[![Coverage Status](https://coveralls.io/repos/github/frank690/garden-of-things/badge.svg?branch=master)](https://coveralls.io/github/frank690/garden-of-things?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/frank690/garden-of-things/badge.svg?branch=main)](https://coveralls.io/github/frank690/garden-of-things?branch=main)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
