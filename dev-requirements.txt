@@ -1,9 +1,11 @@
+black
 pre-commit
-coverage
-flake8
+sphinx
 pytest
 pytest-cov
-pytest-pep8
-python-coveralls
-tox
-setuptools
+pytest-mock
+docstr-coverage
+pylint
+flake8
+freezegun
+coveralls
