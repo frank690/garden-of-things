@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 IP = "127.0.0.1"
-DATABASE = "garden"
-SCHEMA = "greenhouse"
+DATABASE = "garden-of-things"
+SCHEMA = "garden"
 USER = "postgres"
 PW = "postgres"
