@@ -7,7 +7,9 @@ with open("CHANGELOG.md", "r") as fh:
     changelog = fh.read().splitlines()
 
 raw_changelog_versions = [
-    re.search(pattern=r"^##\s+version\s+(\d+\.\d+\.\d+)", string=c, flags=re.IGNORECASE)
+    re.search(
+        pattern=r"^\#+\s+version\s+(\d+\.\d+\.\d+)", string=c, flags=re.IGNORECASE
+    )
     for c in changelog
 ]
 changelog_version = [rcv for rcv in raw_changelog_versions if rcv is not None][0].group(
