@@ -7,14 +7,14 @@ from contextlib import contextmanager
 from time import sleep
 from typing import Dict
 
-from greenhouse.auxiliary.connections import Listener
-from greenhouse.auxiliary.logging import get_logger
-from greenhouse.database import Greenhouse, Session
+from garden.auxiliary.connections import Listener
+from garden.auxiliary.logging import get_logger
+from garden.database import Greenhouse, Session
 
 
 class Server:
     """
-    Greenhouse server class that awaits mqtt messages from Greenhouse clients and processes them.
+    GoT server class that awaits mqtt messages from clients and processes them.
     """
 
     def __init__(self, ip: str, port: int, topic: str):

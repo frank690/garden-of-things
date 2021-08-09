@@ -7,9 +7,10 @@ __all__ = [
     "Greenhouse",
 ]
 
-from greenhouse.config.target import SCHEMA
-from greenhouse.database.base import Base
 from sqlalchemy import Column, Float, Integer, String
+
+from garden.config.target import SCHEMA
+from garden.database.base import Base
 
 
 class Greenhouse(Base):

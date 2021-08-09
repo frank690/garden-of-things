@@ -8,5 +8,5 @@ __all__ = [
     "Greenhouse",
 ]
 
-from greenhouse.database.base import Base, Session
-from greenhouse.database.greenhouse import Greenhouse
+from garden.database.base import Base, Session
+from garden.database.greenhouse import Greenhouse

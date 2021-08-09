@@ -1,4 +1,4 @@
-CREATE TABLE greenhouse.greenhouse
+CREATE TABLE garden-of-things.garden
 (
     id SERIAL PRIMARY KEY,
     "timestamp" text NOT NULL,
@@ -8,5 +8,5 @@ CREATE TABLE greenhouse.greenhouse
     sun_intensity real
 );
 
-ALTER TABLE greenhouse.greenhouse
+ALTER TABLE garden-of-things.garden
     OWNER to postgres;
