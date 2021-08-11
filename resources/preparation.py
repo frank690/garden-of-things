@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 Use this script to prepare the postgresql service for its upcoming tasks.
 """
