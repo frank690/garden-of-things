@@ -1,12 +1,15 @@
-CREATE TABLE garden-of-things.garden
+CREATE SCHEMA got
+    AUTHORIZATION postgres;
+
+CREATE TABLE got.greenhouse
 (
     id SERIAL PRIMARY KEY,
-    "timestamp" text NOT NULL,
+    "timestamp" date NOT NULL,
     temperature real,
     humidity real,
     moisture real,
     sun_intensity real
 );
 
-ALTER TABLE garden-of-things.garden
+ALTER TABLE got.greenhouse
     OWNER to postgres;
