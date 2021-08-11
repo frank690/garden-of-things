@@ -7,7 +7,7 @@ __all__ = [
     "Greenhouse",
 ]
 
-from sqlalchemy import Column, Float, Integer, String
+from sqlalchemy import Column, DateTime, Float, Integer
 
 from garden.config.target import SCHEMA
 from garden.database.base import Base
@@ -18,7 +18,7 @@ class Greenhouse(Base):
     __table_args__ = {"schema": SCHEMA}
 
     id = Column(Integer, primary_key=True)
-    timestamp = Column(String, nullable=False)
+    timestamp = Column(DateTime, nullable=False)
     temperature = Column(Float, nullable=True)
     humidity = Column(Float, nullable=True)
     moisture = Column(Float, nullable=True)
