@@ -8,5 +8,7 @@ __all__ = [
     "Greenhouse",
 ]
 
-from garden.database.base import Base, Session
+from garden.database.base import Base, Engine, Session
 from garden.database.greenhouse import Greenhouse
+
+Base.metadata.create_all(Engine)
