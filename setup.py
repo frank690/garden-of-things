@@ -28,7 +28,7 @@ with open("requirements.txt", "r") as fh:
 requirements = [req for req in requirements if not req.lower().startswith("pytest")]
 
 setuptools.setup(
-    name="garden-of-things",
+    name="got",
     version=changelog_version,
     author="frank690",
     author_email="sffresch@gmx.de",
