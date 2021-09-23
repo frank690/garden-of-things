@@ -5,8 +5,8 @@
 
 
 I like to be in the garden, but I also like to tinker and code.
-This project is meant to combine both and turn my garden into a weired IoT version: the garden-of-things (GoT).
-Let us hope that this projects starts off as well as the show but continues steadily instead of ending in a disappointment.
+This project is meant to combine both and turn my garden into a weird IoT version: the garden-of-things (GoT).
+Let us hope that this projects starts off as well as the show but continues steadily instead of ending in a catastrophy.
 
 ## Hardware
 What hardware is used and how is it set up?
