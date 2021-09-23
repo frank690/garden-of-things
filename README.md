@@ -5,8 +5,8 @@
 
 
 I like to be in the garden, but I also like to tinker and code.
-This project is meant to combine both and turn my garden into a weired IoT version: the garden-of-things (GoT).
-Let us hope that this projects starts off as well as the show but continues steadily instead of ending in a disappointment.
+This project is meant to combine both and turn my garden into a weird IoT version: the garden-of-things (GoT).
+Let us hope that this projects starts off as well as the show but continues steadily instead of ending in a catastrophy.
 
 ## Hardware
 What hardware is used and how is it set up?
@@ -27,7 +27,10 @@ I also aim to make this dashboard publicly available by using some DynDNS routin
 
 ## What is currently going on?
 Check out the [CHANGELOG.md](./CHANGELOG.md) to see what is done and planned for the future.
+<<<<<<< HEAD
 
 ## Notes
 - Using the client code for the esp32 depends on the following repositories to be installed beforehand:
     - https://github.com/beegee-tokyo/DHTesp (for reading the DHT humidity sensor)
+=======
+>>>>>>> d1955357f1ec3dd470eddd39876f63e0a578e4dd
