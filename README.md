@@ -16,8 +16,16 @@ One (or possibly multiple) esp32 units that are equipped with various sensors
 (to measure e.g. temperature, sun intensity, humidity, ...). The measured values are streamed via MQTT to a home server (e.g. a raspberry pi).
 The PCB board design can be found [ħere](./resources/client_pcb_board.brd).
 
-<img src="./resources/pcb_board_front.png" alt="pcb board front" width="200"/>
-<img src="./resources/pcb_board_back.png" alt="pcb board back" width="200"/>
+<table>
+  <tr>
+    <td>
+      <img src="./resources/pcb_board_front.png" alt="pcb board front" width="200"/> 
+    </td>  
+    <td>
+      <img src="./resources/pcb_board_back.png" alt="pcb board back" width="200"/>
+    </td>
+  </tr>
+</table>
 
 ### Server
 A raspberry pi that has a [mosquitto mqtt broker](https://mosquitto.org/) running on it but also listens for incoming data of the client.
@@ -32,5 +40,3 @@ Check out the [CHANGELOG.md](./CHANGELOG.md) to see what is done and planned for
 ## Notes
 - Using the client code for the esp32 depends on the following repositories to be installed beforehand:
     - https://github.com/beegee-tokyo/DHTesp (for reading the DHT humidity sensor)
-=======
->>>>>>> d1955357f1ec3dd470eddd39876f63e0a578e4dd
