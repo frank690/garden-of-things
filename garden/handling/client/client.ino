@@ -2,9 +2,9 @@
 #include "DHTesp.h" // Click here to get the library: http://librarymanager/All#DHTesp
 
 // define pin usage
-const int LDR_PIN = A0;
-const int SOIL_MOISTURE_PIN = A1;
-const int DHT_PIN = A2;
+const int LDR_PIN = 8;
+const int SOIL_MOISTURE_PIN = 14;
+const int DHT_PIN = 9;
 
 // define serial connection variables
 const int baudrate = 9600;
