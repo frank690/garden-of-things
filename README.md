@@ -14,6 +14,10 @@ What hardware is used and how is it set up?
 ### Client(s)
 One (or possibly multiple) esp32 units that are equipped with various sensors
 (to measure e.g. temperature, sun intensity, humidity, ...). The measured values are streamed via MQTT to a home server (e.g. a raspberry pi).
+The PCB board design can be found [ħere](./resources/client_pcb_board.brd).
+
+<img src="./resources/pcb_board_front.png" alt="pcb board front" width="200"/>
+<img src="./resources/pcb_board_back.png" alt="pcb board back" width="200"/>
 
 ### Server
 A raspberry pi that has a [mosquitto mqtt broker](https://mosquitto.org/) running on it but also listens for incoming data of the client.
