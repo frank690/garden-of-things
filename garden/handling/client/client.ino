@@ -1,46 +1,25 @@
-// include needed libraries
-#include "DHTesp.h" // Click here to get the library: http://librarymanager/All#DHTesp
-
-// define pin usage
-const int LDR_PIN = 8;
-const int SOIL_MOISTURE_PIN = 14;
-const int DHT_PIN = 9;
-
 // define serial connection variables
-const int baudrate = 9600;
-
-// define soil moisture variables
-const int dry_soil_value = 620;
-const int wet_soil_value = 310;
-int soil_moisture_value = 0;
-
-// define humidity instance
-int humidity = 0;
-int temperature = 0;
-DHTesp dht;
-
+const int baud_rate = 9600;
+const int nap_time = 10000;  // 10s naps in between broadcasting values
+const char* name = "NAME_OF_YOUR_ESP32";
 
 // setup and main function
 void setup() {
-  Serial.begin(baudrate);
+  Serial.begin(baud_rate);
   dht.setup(DHT_PIN, DHTesp::DHT22);
-}
 
+  setup_wifi();
+  client.setServer(mqtt_server, 1883);
+}
 
 void loop() {
-  delay(100);
-  float humidity = dht.getHumidity();
-  float temperature = dht.getTemperature();
-}
+  long now = millis();
+  if (now - lastMsg > nap_time) {
+    lastMsg = now;
+    data = get_sensor_values();
 
-
-// additional functions
-int get_light_intensity() {
-  return analogRead(LDR_PIN);
-}
-
-
-float get_soil_moistness() {
-  soil_moisture_value = analogRead(SOIL_MOISTURE_PIN);
-  return map(soil_moisture_value, dry_soil_value, wet_soil_value, 0, 100);
+    Serial.print("Publishing: ");
+    Serial.println(data);
+    client.publish(esp32_name, data);
+  }
 }

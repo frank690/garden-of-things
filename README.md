@@ -35,8 +35,8 @@ I also aim to make this dashboard publicly available by using some DynDNS routin
 
 ## What is currently going on?
 Check out the [CHANGELOG.md](./CHANGELOG.md) to see what is done and planned for the future.
-<<<<<<< HEAD
 
 ## Notes
 - Using the client code for the esp32 depends on the following repositories to be installed beforehand:
-    - https://github.com/beegee-tokyo/DHTesp (for reading the DHT humidity sensor)
+    - https://github.com/beegee-tokyo/DHTesp (Reading the DHT humidity sensor)
+    - https://github.com/knolleary/pubsubclient (MQTT Protocol for ESP32)
