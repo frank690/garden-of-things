@@ -38,5 +38,5 @@ Check out the [CHANGELOG.md](./CHANGELOG.md) to see what is done and planned for
 
 ## Notes
 - Using the client code for the esp32 depends on the following repositories to be installed beforehand:
-    - https://github.com/beegee-tokyo/DHTesp (Reading the DHT humidity sensor)
+    - https://github.com/markruys/arduino-DHT (Reading the DHT humidity sensor)
     - https://github.com/knolleary/pubsubclient (MQTT Protocol for ESP32)

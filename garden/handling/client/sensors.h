@@ -1,11 +1,11 @@
 // include needed libraries
-#include "DHTesp.h" // Click here to get the library: http://librarymanager/All#DHTesp
-#include <string>
+#include "DHT.h"
+#define DHT_TYPE DHT22  // DHT 22  (AM2302)
 
 // define pin usage
-const int LDR_PIN = 8;
-const int SOIL_MOISTURE_PIN = 14;
-const int DHT_PIN = 9;
+const int LDR_PIN = A4;
+const int SOIL_MOISTURE_PIN = A15;
+const int DHT_PIN = A5;
 
 // define soil moisture variables
 int soil_moisture_value = 0;
@@ -13,7 +13,8 @@ int soil_moisture_value = 0;
 // define humidity instance
 int humidity = 0;
 int temperature = 0;
-DHTesp dht;
+
+DHT dht(DHT_PIN, DHT_TYPE);
 
 // define some functions to read sensor values
 int get_light_intensity() {
@@ -26,25 +27,25 @@ float get_soil_moistness() {
 }
 
 float get_humidity() {
-    return dht.getHumidity();
+    return dht.readHumidity();
 }
 
 float get_temperature() {
-    return dht.getTemperature();
+    return dht.readTemperature();
 }
 
-char[] append_value_to_string(char[] old_string, char[] topic, float value) {
-    if (strlen(old_string) > 0) {
-        return old_string + ", " + topic + ": " + to_string(value);
+String append_value_to_string(String old_string, String topic, float value) {
+    if (old_string.length() > 0) {
+        return old_string + ", " + topic + ": " + String(value, float_precision);
     }
-    return topic + ": " + to_string(value);
+    return topic + ": " + String(value, float_precision);
 }
 
-string get_sensor_values() {
-    string values = "";
+String get_sensor_values() {
+    String values = "";
     values = append_value_to_string(values, "temperature", get_temperature());
     values = append_value_to_string(values, "humidity", get_humidity());
     values = append_value_to_string(values, "moisture", get_soil_moistness());
-    values = append_value_to_string(values, "light_intensity", get_light_intensity());
+    values = append_value_to_string(values, "sun_intensity", get_light_intensity());
     return "{" + values + "}";
 }
