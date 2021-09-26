@@ -35,6 +35,7 @@ float get_temperature() {
 }
 
 String append_value_to_string(String old_string, String topic, float value) {
+    delay(50);
     if (old_string.length() > 0) {
         return old_string + ", " + topic + ": " + String(value, float_precision);
     }
